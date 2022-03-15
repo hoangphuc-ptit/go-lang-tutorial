@@ -7,6 +7,12 @@ import (
 	"time"
 )
 
+// init sets initial values for variables used in the function.
+//Go executes init functions automatically at program startup, after global variables have been initialized
+func init() {
+	rand.Seed(time.Now().UnixNano())
+}
+
 // Hello returns a greeting for the named person.
 func Hello(name string) (string, error) {
 	// If no name was given, return an error with a message.
@@ -15,13 +21,8 @@ func Hello(name string) (string, error) {
 	}
 
 	// Return a greeting that embeds the name in a message.
-	message := fmt.Sprintf("Hi, %v. Welcome!", name)
+	message := fmt.Sprintf(randomFormat(), name)
 	return message, nil
-}
-
-// init sets initial values for variables used in the function.
-func init() {
-	rand.Seed(time.Now().UnixNano())
 }
 
 // randomFormat returns one of a set of greeting messages. The returned
