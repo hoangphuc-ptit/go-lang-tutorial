@@ -23,6 +23,7 @@ var albums = []album{
 	{ID: "2", Title: "Jeru", Artist: "Gerry Mulligan", Price: 17.99},
 	{ID: "3", Title: "Sarah Vaughan and Clifford Brown", Artist: "Sarah Vaughan", Price: 39.99},
 	{ID: "4", Title: "Server 100 tuoi", Artist: "Hoang Phuc", Price: 100.99},
+	{ID: "5", Title: "Server 101 tuoi", Artist: "Hoang Phuc 2", Price: 100.99},
 }
 
 func Start() {
